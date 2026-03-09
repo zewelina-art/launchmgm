@@ -158,11 +158,12 @@ const safeParseAdvice = (rawText: string): BusinessAdviceResponse => {
 };
 
 export const getBusinessAdvice = async (profile: UserProfile): Promise<BusinessAdviceResponse> => {
-  if (!process.env.GEMINI_API_KEY) {
-    throw new Error('Missing GEMINI_API_KEY in .env.local');
+  const geminiApiKey = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
+  if (!geminiApiKey) {
+    throw new Error('Missing VITE_GEMINI_API_KEY in .env.local');
   }
 
-  const client = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+  const client = new GoogleGenAI({ apiKey: geminiApiKey });
 
   const externalContext = await buildExternalContext();
 
