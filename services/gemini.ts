@@ -1,7 +1,11 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { MONTGOMERY_CITY_DATA, ECONOMIC_CONTEXT, SUPPORT_PROGRAMS } from "../data/montgomeryContext";
 
-const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const apiKey = process.env.GEMINI_API_KEY;
+if (!apiKey) {
+  console.error("GEMINI_API_KEY is not set. Please add it to your .env file.");
+}
+const genAI = new GoogleGenAI({ apiKey: apiKey || "" });
 
 export interface UserProfile {
   neighborhood: string;

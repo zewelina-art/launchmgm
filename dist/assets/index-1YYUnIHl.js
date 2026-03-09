@@ -560,7 +560,7 @@ SMALL BUSINESS SUPPORT PROGRAMS:
 - Kiva Montgomery: Crowdfunded micro-loans with 0% interest.
 - The Lab on Dexter: Tech-focused incubator and co-working space.
 - Montgomery County Revolving Loan Fund: Low-interest loans for job-creating businesses.
-`,pk=new ck({apiKey:""}),mk=async t=>{const e="gemini-3.1-pro-preview",i=`
+`;console.error("GEMINI_API_KEY is not set. Please add it to your .env file.");const pk=new ck({apiKey:""}),mk=async t=>{const e="gemini-3.1-pro-preview",i=`
 You are LaunchMGM — an AI business opportunity advisor for residents of Montgomery, Alabama.
 Your role is to analyze a user's profile together with current economic and city data, and identify realistic micro-business opportunities they can start with their available resources.
 The goal is to help residents discover practical ways to start a small business, access local support programs, and generate income.
