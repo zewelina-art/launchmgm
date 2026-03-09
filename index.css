@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "Outfit", sans-serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", serif;
+
+  --color-ink: #1c1410;
+  --color-paper: #faf6ee;
+  --color-surface: #ffffff;
+  --color-border-mgm: #e2d9cb;
+
+  --color-ember: #c4521a;
+  --color-ember-hover: #a8401a;
+  --color-moss: #3d6b4f;
+  --color-brass: #b8860b;
+
+  --color-txt-primary: #1c1410;
+  --color-txt-secondary: #6b5e52;
+  --color-txt-muted: #a09285;
+  --color-txt-inverse: #faf6ee;
+
+  --color-err: #b33a1f;
+  --color-warn: #c47a1a;
+  --color-ok: #3d6b4f;
+
+  --shadow-sm: 0 1px 3px rgba(28, 20, 16, 0.08);
+  --shadow-md: 0 4px 16px rgba(196, 82, 26, 0.35);
+  --shadow-lg: 0 12px 40px rgba(28, 20, 16, 0.14);
+}
+
+:root {
+  --ink: #1c1410;
+  --paper: #faf6ee;
+  --surface: #ffffff;
+  --border: #e2d9cb;
+  --ember: #c4521a;
+  --moss: #3d6b4f;
+  --brass: #b8860b;
+  --text-primary: #1c1410;
+  --text-secondary: #6b5e52;
+  --text-muted: #a09285;
+  --text-inverse: #faf6ee;
+  --error: #b33a1f;
+  --warning: #c47a1a;
+  --success: #3d6b4f;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
