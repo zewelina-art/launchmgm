@@ -1,56 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Fraunces", serif;
-  --font-body: "Outfit", sans-serif;
-  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Fraunces", serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink: #1c1410;
-  --color-paper: #faf6ee;
+  --color-ink: #1f2a37;
+  --color-paper: #ffffff;
   --color-surface: #ffffff;
-  --color-border-mgm: #e2d9cb;
+  --color-border-mgm: #e8edf2;
 
-  --color-ember: #c4521a;
-  --color-ember-hover: #a8401a;
-  --color-moss: #3d6b4f;
-  --color-brass: #b8860b;
+  --color-ember: #118ab2;
+  --color-ember-hover: #0e7495;
+  --color-moss: #06d6a0;
+  --color-brass: #ffd60a;
 
-  --color-txt-primary: #1c1410;
-  --color-txt-secondary: #6b5e52;
-  --color-txt-muted: #a09285;
-  --color-txt-inverse: #faf6ee;
+  --color-txt-primary: #1f2a37;
+  --color-txt-secondary: #5b6b7c;
+  --color-txt-muted: #8192a6;
+  --color-txt-inverse: #ffffff;
 
-  --color-err: #b33a1f;
-  --color-warn: #c47a1a;
-  --color-ok: #3d6b4f;
+  --color-err: #d94848;
+  --color-warn: #d8a602;
+  --color-ok: #06d6a0;
 
-  --shadow-sm: 0 1px 3px rgba(28, 20, 16, 0.08);
-  --shadow-md: 0 4px 16px rgba(196, 82, 26, 0.35);
-  --shadow-lg: 0 12px 40px rgba(28, 20, 16, 0.14);
+  --shadow-sm: 0 1px 3px rgba(17, 138, 178, 0.08);
+  --shadow-md: 0 10px 24px rgba(17, 138, 178, 0.16);
+  --shadow-lg: 0 16px 40px rgba(17, 138, 178, 0.14);
 }
 
 :root {
-  --ink: #1c1410;
-  --paper: #faf6ee;
+  --ink: #1f2a37;
+  --paper: #ffffff;
   --surface: #ffffff;
-  --border: #e2d9cb;
-  --ember: #c4521a;
-  --moss: #3d6b4f;
-  --brass: #b8860b;
-  --text-primary: #1c1410;
-  --text-secondary: #6b5e52;
-  --text-muted: #a09285;
-  --text-inverse: #faf6ee;
-  --error: #b33a1f;
-  --warning: #c47a1a;
-  --success: #3d6b4f;
+  --border: #e8edf2;
+  --ember: #118ab2;
+  --moss: #06d6a0;
+  --brass: #ffd60a;
+  --text-primary: #1f2a37;
+  --text-secondary: #5b6b7c;
+  --text-muted: #8192a6;
+  --text-inverse: #ffffff;
+  --error: #d94848;
+  --warning: #d8a602;
+  --success: #06d6a0;
 }
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Inter", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500;
+}
+
+b,
+strong,
+.font-black,
+.font-bold,
+.font-semibold,
+.font-extrabold {
+  font-weight: 500 !important;
+}
+
+main {
+  row-gap: 2.5rem;
+}
+
+section,
+article,
+form {
+  margin-bottom: 1rem;
+}
+
+button {
+  border-radius: 16px !important;
+  font-weight: 500 !important;
+}
+
+/* Minimal polish: softer cards and cleaner form controls */
+section,
+article,
+form {
+  border-color: #dfe7ef;
+}
+
+input,
+select,
+textarea {
+  background: #f9fcff;
+  border-color: #dfe7ef;
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+  }
+
+  main,
+  section,
+  article,
+  form,
+  div {
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  article {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #d7dfe8 !important;
+    margin-bottom: 12pt !important;
+  }
 }

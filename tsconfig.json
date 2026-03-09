@@ -24,6 +24,7 @@
     "noEmit": true
   },
   "include": [
+    "vite-env.d.ts",
     "main.tsx",
     "App.tsx",
     "index.css",

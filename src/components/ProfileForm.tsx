@@ -107,9 +107,19 @@ export const ProfileForm: React.FC<ProfileFormProps> = ({ onSubmit, isLoading })
           <button type="button" onClick={() => setStep(s => s - 1)} className="text-sm font-bold text-gray-600 hover:text-ink">Back</button>
         ) : <div />}
         {step < 3 ? (
-          <button type="button" onClick={() => setStep(s => s + 1)} className="px-6 py-3 bg-ink text-paper font-bold rounded-[10px] hover:bg-gray-800 transition-colors">Next</button>
+          <button
+            key="next-step"
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              setStep(s => s + 1);
+            }}
+            className="px-6 py-3 bg-ink text-paper font-bold rounded-[10px] hover:bg-gray-800 transition-colors"
+          >
+            Next
+          </button>
         ) : (
-          <button type="submit" disabled={isLoading} className="w-full md:w-auto px-8 py-4 bg-ember text-paper font-bold rounded-[10px] hover:bg-ember-hover hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-md">
+          <button key="submit-profile" type="submit" disabled={isLoading} className="w-full md:w-auto px-8 py-4 bg-ember text-paper font-bold rounded-[10px] hover:bg-ember-hover hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-md">
             {isLoading ? (
               <><div className="w-5 h-5 border-2 border-paper/30 border-t-paper rounded-full animate-spin" /> Analyzing...</>
             ) : "Find My Opportunities"}
